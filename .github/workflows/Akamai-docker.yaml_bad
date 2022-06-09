@@ -1,0 +1,50 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+jobs:
+  my_job:
+    runs-on: ubuntu-latest
+    container:
+      image: deepakjd2004/github-action
+    steps:
+<<<<<<< HEAD
+      - uses: actions/checkout@v2
+      - name: Terraform - Import an existing property
+        run: |
+             echo -e "[papi]\nclient_secret = ${{ secrets.AKAMAI_DEFAULT_CLIENT_SECRET }}\nhost = ${{ secrets.AKAMAI_DEFAULT_HOST }}\naccess_token = ${{ secrets.AKAMAI_DEFAULT_ACCESS_TOKEN }}\nclient_token = ${{ secrets.AKAMAI_DEFAULT_CLIENT_TOKEN }}\naccount_key = ${{secrets.AKAMAI_AS_ACCOUNTSWITCHKEY}}" > "$HOME/.edgerc"
+             akamai terraform --accountkey ${{secrets.AKAMAI_AS_ACCOUNTSWITCHKEY}} create-property demo-property-nine-DJ
+=======
+      - name: checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+        
+      - name: Terraform - Import an existing property
+        run: |
+             echo -e "[default]\nclient_secret = ${{ secrets.AKAMAI_DEFAULT_CLIENT_SECRET }}\nhost = ${{ secrets.AKAMAI_DEFAULT_HOST }}\naccess_token = ${{ secrets.AKAMAI_DEFAULT_ACCESS_TOKEN }}\nclient_token = ${{ secrets.AKAMAI_DEFAULT_CLIENT_TOKEN }}\naccount_key = ${{secrets.AKAMAI_AS_ACCOUNTSWITCHKEY}}" > "$HOME/.edgerc"
+             akamai terraform --accountkey ${{secrets.AKAMAI_AS_ACCOUNTSWITCHKEY}} create-property Devops-Training
+             which git
+             git --version
+             git init
+             git config --local user.email "deepakjd2004@gmail.com"
+             git config --local user.name "deepakjd2004"
+             git add --all
+             git commit -m "Add changes" -a
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+          
+>>>>>>> b7099f96924ee6a4a363b5b3e6cb1a9ef7beacd8

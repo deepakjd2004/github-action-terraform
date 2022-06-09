@@ -1,0 +1,11 @@
+{
+    "productId": "prd_SPM",
+    "contractId": "ctr_C-1ED34DY",
+    "groupId": "178772",
+    "version": "0.7.7-RELEASE",
+    "isSecure": false,
+    "edgeGridConfig": {
+        "section": "papi"
+    },
+    "name": "dj-config-rapid-dj.xml"
+}

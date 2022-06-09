@@ -1,0 +1,18 @@
+{
+    "name": "Test",
+    "children": [],
+    "behaviors": [
+        {
+            "name": "modifyOutgoingResponseHeader",
+            "options": {
+                "action": "MODIFY",
+                "avoidDuplicateHeaders": false,
+                "customHeaderName": "apikey_1",
+                "newHeaderValue": "xyz123",
+                "standardModifyHeaderName": "OTHER"
+            }
+        }
+    ],
+    "criteria": [],
+    "criteriaMustSatisfy": "all"
+}

@@ -1,0 +1,17 @@
+{
+    "name": "dj26May2022-config-rapid-dj.xml",
+    "propertyName": "dj26May2022-config-rapid-dj.xml",
+    "groupId": "178772",
+    "isSecure": false,
+    "propertyId": 803491,
+    "latestVersionInfo": {
+        "propertyVersion": 1,
+        "updatedByUser": "djha",
+        "updatedDate": "2022-05-26T09:01:50Z",
+        "productionStatus": "INACTIVE",
+        "stagingStatus": "INACTIVE",
+        "productId": "prd_SPM",
+        "ruleFormat": "latest"
+    },
+    "suggestedRuleFormat": "v2021-09-22"
+}
