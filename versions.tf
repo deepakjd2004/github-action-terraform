@@ -9,4 +9,9 @@ terraform {
       version = "1.9.0"
     }
   }
-}
+  backend "s3" {
+         bucket = "tf-backend-dj"
+         key    = "state/terraform.tfstate"
+         region = var.aws_region
+     }
+  }
