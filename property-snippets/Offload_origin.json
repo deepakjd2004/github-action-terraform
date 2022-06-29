@@ -147,7 +147,7 @@
           "options": {
             "behavior": "MAX_AGE",
             "mustRevalidate": false,
-            "ttl": "10d"
+            "ttl": "90d"
           }
         }
       ],
