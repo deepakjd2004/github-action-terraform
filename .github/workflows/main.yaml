@@ -5,15 +5,15 @@ on:
   push:
     branches:
       - main
-  # Allows you to run thisworkflow manually from the Actions tabs
+
   pull_request:
-  
+  # Allows you to run thisworkflow manually from the Actions tabs
   workflow_dispatch:
 env:
   AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
   AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  TF_ACTION_WORKING_DIR: '.'
+  # TF_ACTION_WORKING_DIR: '.'
 jobs:
   tf_fmt:
     name: Deploy Site
