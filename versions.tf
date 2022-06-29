@@ -5,13 +5,13 @@ terraform {
       version = "~> 3.0"
     }
     akamai = {
-      source = "akamai/akamai"
+      source  = "akamai/akamai"
       version = "1.9.0"
     }
   }
   backend "s3" {
-         bucket = "tf-backend-dj"
-         key    = "state/terraform.tfstate"
-         region = "us-east-1"
-     }
+    bucket = "tf-backend-dj"
+    key    = "state/terraform.tfstate"
+    region = "us-east-1"
   }
+}
