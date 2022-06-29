@@ -4,7 +4,7 @@ name: Deploy Infrastructure
 on:
   push:
     branches:
-      - master
+      - main
   # Allows you to run thisworkflow manually from the Actions tabs
   workflow_dispatch:
 jobs:
