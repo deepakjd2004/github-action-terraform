@@ -25,13 +25,13 @@ resource "akamai_edge_hostname" "www-this-site-does-not-exist-com-au-edgesuite-n
 }
 
 resource "akamai_property" "Devops-Training" {
- name = "Devops-Training"
+ name = "Devops-Training-29Jun2022"
  contract_id = data.akamai_contract.contract.id
  group_id = data.akamai_group.group.id
  product_id = "prd_SPM"
  rule_format = "latest"
  hostnames {
-  cname_from = "www.this-site-does-not-exist.com.au"
+  cname_from = "www.Devops-Training-29Jun2022-does-not-exist.com.au"
   cname_to = akamai_edge_hostname.www-this-site-does-not-exist-com-au-edgesuite-net.edge_hostname
   cert_provisioning_type = "CPS_MANAGED"
  }
