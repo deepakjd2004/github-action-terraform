@@ -5,7 +5,7 @@ provider "akamai" {
 
 data "akamai_group" "group" {
   group_name  = "DJ"
-  contract_id = "ctr_C-1ED34DY"
+  contract_id = "<>"
 }
 
 data "akamai_contract" "contract" {
@@ -16,11 +16,11 @@ data "akamai_property_rules_template" "rules" {
   template_file = abspath("${path.module}/property-snippets/main.json")
 }
 
+  group_id      = data.akamai_group.group.id
+  ip_behavior   = "IPV4"
 resource "akamai_edge_hostname" "www-this-site-does-not-exist-com-au-edgesuite-net" {
   product_id    = "prd_SPM"
   contract_id   = data.akamai_contract.contract.id
-  group_id      = data.akamai_group.group.id
-  ip_behavior   = "IPV4"
   edge_hostname = "www.this-site-does-not-exist.com.au.edgesuite.net"
 }
 
