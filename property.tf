@@ -5,7 +5,7 @@ provider "akamai" {
 
 data "akamai_group" "group" {
   group_name  = "DJ"
-  contract_id = "ctr_C-1ED34DY"
+  contract_id = "<>"
 }
 
 data "akamai_contract" "contract" {
